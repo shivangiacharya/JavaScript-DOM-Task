@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <style>
+        #demo1
+        .hightlight {
+        background: yellow;
+        font-size: 28px;
+      }
+      p{
+        font-size: 20px;
+      }
+    </style>
+</head>
+<body>
+    <h2>Hightlight the Text</h2>
+    <h1>“The Night Train at Deoli” by Ruskin Bond</h1>
+    <p id="demo1">Ruskin Bond used to spend his summer at his grandmother’s house in Dehradun.  While taking the train, he always had to pass through a small station called Deoli.  No one used to get down at the station and nothing happened there.  Until one day he sees a girl selling fruit and he is unable to forget her. What Is Great About It: Ruskin Bond is a writer who can communicate deep feelings in a simple way.  This story is about our attachment to strangers and why we cherish (value or appreciate deeply) them even though we do not meet them ever again.</p>
+    <script>
+        window.onload = function() {
+        const check = word => {
+          if (word.length > 8) {
+            return '<span class="hightlight">' + word + '</span>'
+          } else {
+            return word
+          }
+        }
+      
+        const sample = document.querySelector("#demo1")
+        demo1.innerHTML = demo1
+        .innerText
+        .trim()
+        .split(' ')
+        .map(check)
+        .join(' ')
+      }
+    </script>
+    
+</body>
+</html>

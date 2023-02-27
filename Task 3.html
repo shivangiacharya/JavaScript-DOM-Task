@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <style>
+        p{
+            font-size: 30px;
+        }
+       
+    </style>
+</head>
+<body>
+    <h2>When Mouse over the bold text it should be highlighted.</h2>
+    <h1><strong> “Girl” by Jamaica Kincaid </strong></h1>
+     <p> [<a href="#" onMouseOver="highlight()" onMouseOut="return_normal()" >On mouse over here bold words of the following paragraph will be highlighted</a>]</p> 
+    <p id="demo"> A <strong>mother</strong> is telling her daughter how to live her life properly. The <strong>daughter</strong> does not seem to have any say in it.  <strong>What Is Great About It</strong>: This may not be technically a story since there is no plot. <strong>“Girl”</strong> talks about how girls are taught to live restricted lives <strong>since childhood</strong>.  The mother instructs (tells) her to do all the household chores, indicating that it is her sole purpose <strong>(only aim or duty)</strong>.   Sometimes the mother tells her to not <strong>attract attention</strong>, to not talk to boys and to always keep away from men.   On the other hand, she hints that she will have to be attractive to bakers and other suitable males in society to live a <strong>good life</strong>.  This story is about these conflicting ideas that <strong>girls face</strong> when growing up.</p>
+ 
+    <script>
+       //First create a list of all bold items 
+var bold_Items;
+window.onload = getBold_items();
+ 
+// Collect all <strong> tags
+function getBold_items() 
+{
+  bold_Items = document.getElementsByTagName('strong'); 
+}
+// iterate all bold tags and change color  
+function highlight() 
+{
+   for (var i=0; i<bold_Items.length; i++)
+   {                                                    
+    bold_Items[i].style.color = "red";
+    }
+}
+
+// On mouse out highlighted words become black
+function return_normal()
+{
+  for (var i=0; i<bold_Items.length; i++) 
+  {
+       bold_Items[i].style.color = "black";
+  }
+}
+    </script>
+</body>
+</html>
